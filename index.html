@@ -438,6 +438,16 @@
     </div>
   </footer>
 
+  <!-- Botón Flotante de Lujo: WhatsApp Concierge IDOL JOSE (+1 786-647-5982) -->
+  <a href="https://wa.me/17866475982?text=Hola%20equipo%20Doral%20Business%20City%2C%20vengo%20desde%20doralbusinesscity.com%20y%20deseo%20informaci%C3%B3n%20sobre%20espacios%20en%20la%20revista%20y%20patrocinios."
+     target="_blank"
+     rel="noopener noreferrer"
+     class="whatsapp-concierge-float"
+     aria-label="Contacto directo por WhatsApp con Doral Business City">
+    <span class="wa-pulse"></span>
+    <span>Publicidad & Prensa · WhatsApp</span>
+  </a>
+
   <script>
     function submitCityLead(event) {
       event.preventDefault();
@@ -458,9 +468,13 @@
       const msgEl = document.getElementById("cityLeadConfirm");
       if (msgEl) {
         msgEl.style.display = "block";
-        msgEl.textContent = "✓ Registro recibido exitosamente. Nuestro equipo comercial te contactará por WhatsApp.";
+        msgEl.textContent = "✓ Registro recibido exitosamente. Conectando con el equipo comercial por WhatsApp...";
       }
       form.reset();
+      const waText = encodeURIComponent(
+        `Hola Doral Business City, acabo de registrarme en doralbusinesscity.com:\n\n• Nombre/Empresa: ${lead.fullName}\n• Teléfono: ${lead.phone}\n• Email: ${lead.email}\n• Motivo: ${lead.reason}\n• Detalles: ${lead.notes || "Solicitud comercial"}`
+      );
+      window.open(`https://wa.me/17866475982?text=${waText}`, "_blank");
     }
   </script>
 </body>
