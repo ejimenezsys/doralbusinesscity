@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doralbusinesscity.com/sitemap.xml
+
